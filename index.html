@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ท่องเที่ยวไทย</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🏕</div>
+                <span>ไทยท่องเที่ยว</span>
+            </a>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="active">หน้าแรก</a></li>
+                <li><a href="#places">สถานที่แนะนำ</a></li>
+                <li class="dropdown">
+                    <a href="#knowledge">
+                        สาระน่ารู้
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="#history">ประวัติศาสตร์เเม่กลอง</a>
+                        <a href="#culture">วัฒนธรรม</a>
+                        <a href="#food">อาหารไทย</a>
+                        <a href="#festival">เทศกาลไทย</a>
+                        <a href="#art">ศิลปะไทย</a>
+                    </div>
+                </li>
+                <li><a href="#activities">กิจกรรมและข่าวสาร</a></li>
+                <li><a href="#service">บริการ</a></li>
+                <li><a href="#contact">ติดต่อเรา</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero" id="home">
+        <h1>ยินดีต้อนรับสู่ไทยท่องเที่ยว</h1>
+        <p>ค้นพบเสน่ห์แห่งดินแดนสยาม ท่ามกลางวัฒนธรรมอันงดงาม และประเพณีที่น่าประทับใจ</p>
+
+    </div>
+
+    <main>
+        <section id="places" class="content-section">
+            <h2>สถานที่แนะนำ</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://img.kapook.com/u/2023/sutasinee/04/WatPhraKaew11.jpg" alt="วัดพระแก้ว">
+                    <div class="card-content">
+                        <h3>กรุงเทพมหานคร</h3>
+                        <p>เมืองหลวงที่เต็มไปด้วยสีสัน วัดวาอารามที่งดงาม และอาหาร Street Food ที่มีชื่อเสียงระดับโลก
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.ananda.co.th/blog/thegenc/wp-content/uploads/2023/11/shutterstock_2091837973-1-825x550.jpg"
+                        alt="ดอยอินทนนท์">
+                    <div class="card-content">
+                        <h3>เชียงใหม่</h3>
+                        <p>สัมผัสอากาศเย็นสบาย ธรรมชาติที่อุดมสมบูรณ์ และวัฒนธรรมล้านนาที่เป็นเอกลักษณ์</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbgEI9vZZUsaOW5eibEFeLG83W9XuS60ofTJvLbJxSFF8IzFxdNHWiDDKmRXnRkw5pP_w&usqp=CAU"
+                        alt="อ่าวมาหยา">
+                    <div class="card-content">
+                        <h3>ภูเก็ต</h3>
+                        <p>สวรรค์ของคนรักทะเล หาดทรายขาวละเอียด น้ำทะเลสีฟ้าคราม และเกาะแก่งที่สวยงาม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://mpics.mgronline.com/pics/Images/550000010326001.JPEG" alt="ภูทับเบิก">
+                    <div class="card-content">
+                        <h3>ภูทับเบิก</h3>
+                        <p>สวรรค์ของคนรักทะเล หาดทรายขาวละเอียด น้ำทะเลสีฟ้าคราม และเกาะแก่งที่สวยงาม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.trattown.com/wp-content/uploads/2023/12/IMG_6456.jpg" alt="ภูทับเบิก">
+                    <div class="card-content">
+                        <h3>เกาะช้าง</h3>
+                        <p>สวรรค์ของคนรักทะเล หาดทรายขาวละเอียด น้ำทะเลสีฟ้าคราม และเกาะแก่งที่สวยงาม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/d2/d1/78/don-hoi-lot-mud-beach.jpg?w=900&h=500&s=1"
+                        alt="ภูทับเบิก">
+                    <div class="card-content">
+                        <h3>ดอนหอยหลอด</h3>
+                        <p>สวรรค์ของคนรักทะเล หาดทรายขาวละเอียด น้ำทะเลสีฟ้าคราม และเกาะแก่งที่สวยงาม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://mpics.mgronline.com/pics/Images/550000010326001.JPEG" alt="ภูทับเบิก">
+                    <div class="card-content">
+                        <h3>ภูทับเบิก</h3>
+                        <p>สวรรค์ของคนรักทะเล หาดทรายขาวละเอียด น้ำทะเลสีฟ้าคราม และเกาะแก่งที่สวยงาม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.ananda.co.th/blog/thegenc/wp-content/uploads/2023/11/shutterstock_2091837973-1-825x550.jpg"
+                        alt="ดอยอินทนนท์">
+                    <div class="card-content">
+                        <h3>เชียงใหม่</h3>
+                        <p>สัมผัสอากาศเย็นสบาย ธรรมชาติที่อุดมสมบูรณ์ และวัฒนธรรมล้านนาที่เป็นเอกลักษณ์</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/d2/d1/78/don-hoi-lot-mud-beach.jpg?w=900&h=500&s=1"
+                        alt="ภูทับเบิก">
+                    <div class="card-content">
+                        <h3>ดอนหอยหลอด</h3>
+                        <p>สวรรค์ของคนรักทะเล หาดทรายขาวละเอียด น้ำทะเลสีฟ้าคราม และเกาะแก่งที่สวยงาม</p>
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="https://img.kapook.com/u/2023/sutasinee/04/WatPhraKaew11.jpg" alt="วัดพระแก้ว">
+                        <div class="card-content">
+                            <h3>กรุงเทพมหานคร</h3>
+                            <p>เมืองหลวงที่เต็มไปด้วยสีสัน วัดวาอารามที่งดงาม และอาหาร Street Food
+                                ที่มีชื่อเสียงระดับโลก</p>
+                        </div>
+                    </div>
+
+        </section>
+
+        <section id="activities" class="content-section">
+            <h2>กิจกรรมและข่าวสาร</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxmaO8QXaBdowavC3XRxqJIYIBmntDuAF4Q&s"
+                        alt="เทศกาลลอยกระทง">
+                    <div class="card-content">
+                        <h3>เทศกาลลอยกระทง</h3>
+                        <p>สัมผัสประเพณีอันงดงามในคืนวันเพ็ญเดือนสิบสอง ร่วมลอยกระทงเพื่อขอขมาพระแม่คงคา</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.scb.co.th/getmedia/59510c02-8e6a-410a-9fe4-8b33669428f8/thai-food10.jpg"
+                        alt="เรียนทำอาหารไทย">
+                    <div class="card-content">
+                        <h3>เรียนทำอาหารไทย</h3>
+                        <p>ค้นพบเคล็ดลับความอร่อยของอาหารไทย พร้อมลงมือทำด้วยตัวเองกับเชฟผู้เชี่ยวชาญ</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-1NOBsNbE9ayYkAHBc_tZcyZMnYGcQu1ymA&s"
+                        alt="นวดแผนไทย">
+                    <div class="card-content">
+                        <h3>นวดแผนไทย</h3>
+                        <p>ผ่อนคลายร่างกายและจิตใจด้วยศาสตร์การนวดโบราณที่เป็นมรดกโลกทางวัฒนธรรม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://s359.kapook.com/pagebuilder/2f345f98-6941-40de-9d19-2a27bead1762.jpg"
+                        alt="นวดแผนไทย">
+                    <div class="card-content">
+                        <h3>เเห่เทียน</h3>
+                        <p>ผ่อนคลายร่างกายและจิตใจด้วยศาสตร์การนวดโบราณที่เป็นมรดกโลกทางวัฒนธรรม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxmaO8QXaBdowavC3XRxqJIYIBmntDuAF4Q&s"
+                        alt="เทศกาลลอยกระทง">
+                    <div class="card-content">
+                        <h3>เทศกาลลอยกระทง</h3>
+                        <p>สัมผัสประเพณีอันงดงามในคืนวันเพ็ญเดือนสิบสอง ร่วมลอยกระทงเพื่อขอขมาพระแม่คงคา</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://www.scb.co.th/getmedia/59510c02-8e6a-410a-9fe4-8b33669428f8/thai-food10.jpg"
+                        alt="เรียนทำอาหารไทย">
+                    <div class="card-content">
+                        <h3>เรียนทำอาหารไทย</h3>
+                        <p>ค้นพบเคล็ดลับความอร่อยของอาหารไทย พร้อมลงมือทำด้วยตัวเองกับเชฟผู้เชี่ยวชาญ</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-1NOBsNbE9ayYkAHBc_tZcyZMnYGcQu1ymA&s"
+                        alt="นวดแผนไทย">
+                    <div class="card-content">
+                        <h3>นวดแผนไทย</h3>
+                        <p>ผ่อนคลายร่างกายและจิตใจด้วยศาสตร์การนวดโบราณที่เป็นมรดกโลกทางวัฒนธรรม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/muay-thai-thai-boxing-fighters_654080-775.jpg?t=st=1659090756~exp=1659091356~hmac=2e4393b5c27262cf5af5597fd37c025e1c95497d7a2b5278a406294fcd5416a6"
+                        alt="เรียนมวยไทย">
+                    <div class="card-content">
+                        <h3>เรียนมวยไทย</h3>
+                        <p>ผ่อนคลายร่างกายและจิตใจด้วยศาสตร์การนวดโบราณที่เป็นมรดกโลกทางวัฒนธรรม</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://s359.kapook.com/pagebuilder/2f345f98-6941-40de-9d19-2a27bead1762.jpg"
+                        alt="นวดแผนไทย">
+                    <div class="card-content">
+                        <h3>เเห่เทียน</h3>
+                        <p>ผ่อนคลายร่างกายและจิตใจด้วยศาสตร์การนวดโบราณที่เป็นมรดกโลกทางวัฒนธรรม</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/muay-thai-thai-boxing-fighters_654080-775.jpg?t=st=1659090756~exp=1659091356~hmac=2e4393b5c27262cf5af5597fd37c025e1c95497d7a2b5278a406294fcd5416a6"
+                        alt="เรียนมวยไทย">
+                    <div class="card-content">
+                        <h3>เรียนมวยไทย</h3>
+                        <p>ผ่อนคลายร่างกายและจิตใจด้วยศาสตร์การนวดโบราณที่เป็นมรดกโลกทางวัฒนธรรม</p>
+                    </div>
+                </div>
+                
+
+            </div>
+        </section>
+
+
+        <section id="contact" class="content-section">
+            <h2>ติดต่อเรา</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="ชื่อ-นามสกุล" required>
+                <input type="email" name="email" placeholder="อีเมล" required>
+                <textarea name="message" rows="6" placeholder="ข้อความ" required></textarea>
+                <button type="submit" class="cta-button">ส่งข้อความ</button>
+            </form>
+        </section>
+    </main>
+
+    <button class="chat-toggle-button" onclick="toggleChatPopup()">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div class="chat-popup-container" id="chatBotPopup">
+        <div class="chat-header">
+            <!-- <img src="logo.png" alt="Logo" class="chat-header-logo"> -->
+            <h3 >สวัสดีครับ ยินดีต้อนรับ</h3>
+            <button class="chat-close-btn" onclick="toggleChatPopup()">×</button>
+        </div>
+
+        <div class="chat-body">
+            <p>สวัสดีครับ มีอะไรให้เราช่วยไหม?</p>
+        </div>
+
+        <div class="chat-footer">
+            <input type="text" placeholder="พิมพ์ข้อความของคุณ...">
+            <button>ส่ง</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 ไทยท่องเที่ยว. สงวนลิขสิทธิ์.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navbar = document.getElementById('navbar');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        // Toggle mobile menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link (mobile)
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Only close if it's NOT a dropdown toggle
+                if (window.innerWidth <= 768 && !link.closest('.dropdown')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Dropdown toggle for mobile
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+        function toggleChatPopup() {
+            // เลือกหน้าต่างแชทด้วย id ที่เราตั้งไว้
+            var chatPopup = document.getElementById("chatBotPopup");
+
+            // สลับคลาส 'show' 
+            // (ถ้ามีคลาส 'show' อยู่ จะลบออก / ถ้าไม่มี จะเพิ่มเข้าไป)
+            chatPopup.classList.toggle("show");
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Active link on scroll
+        const sections = document.querySelectorAll('.content-section, .hero');
+        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= (sectionTop - 150)) { // Adjust offset as needed
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkHref = link.getAttribute('href');
+
+                // Check for direct match
+                if (linkHref === `#${current}`) {
+                    link.classList.add('active');
+                }
+
+                // Check for parent dropdown items (like #food -> #knowledge)
+                const dropdownParent = link.closest('.dropdown-content');
+                if (dropdownParent) {
+                    const parentLink = dropdownParent.previousElementSibling;
+                    const parentHref = parentLink.getAttribute('href');
+                    if (parentHref === `#${current}`) {
+                        // This part is tricky, for now, we just highlight the main nav
+                        // A more complex logic would be needed to highlight the parent
+                    }
+                }
+            });
+
+            // Fallback for top of the page
+            if (current === 'home' || current === '') {
+                document.querySelector('.nav-menu a[href="#home"]').classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
