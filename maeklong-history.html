@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติศาสตร์แม่กลอง - เสน่ห์สมุทรสงคราม</title>
+
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Import Google Font (Sarabun) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ตั้งค่า font เริ่มต้น */
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #f9fafb;
+            /* bg-gray-50 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+      Navbar (Navigation Bar) 
+      อ้างอิงดีไซน์จากเว็บที่คุณให้มา
+    -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo and Title -->
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- แก้ไข SVG เป็น <img> tag -->
+                    <!-- คุณสามารถเปลี่ยน 'src' เป็น URL ของโลโก้จริงได้เลยครับ -->
+                    <img class="h-17 w-14 object-contain"  object-contain" src="img/logo.png" alt="Logo เสน่ห์เมืองน้ำ">
+                    <span class="ml-2 text-xl font-bold text-gray-800">เสน่ห์เมืองน้ำ</span>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex md:items-center md:space-x-6">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">หน้าแรก</a>
+                    <!-- Dropdown Menu (สาระน่ารู้) -->
+                    <div class="relative">
+                        <!-- ปุ่มเมนู (Active State) -->
+                        <button id="dropdown-btn"
+                            class="flex items-center bg-green-600 text-white px-3 py-2 rounded-full text-sm font-medium hover:bg-green-700 focus:outline-none">
+                            <span>สาระน่ารู้</span>
+                            <!-- ไอคอนลูกศร -->
+                            <svg id="dropdown-arrow" class="w-4 h-4 ml-1 transition-transform duration-200"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+
+                        <!-- เมนูย่อย (ซ่อนไว้เริ่มต้น) -->
+                        <div id="dropdown-menu"
+                            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <!-- Active link (ประวัติศาสตร์แม่กลอง) -->
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-green-700 font-semibold bg-green-50">ประวัติศาสตร์แม่กลอง</a>
+                            <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">วัฒนธรรม</a> -->
+                            <a href="maeklong-food.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">อาหารไทย</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">เทศกาลไทย</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">ศิลปะไทย</a>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">กิจกรรมและข่าวสาร</a>
+                    <a href="#"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">บริการ</a>
+                    <a href="#"
+                        class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">ติดต่อเรา</a>
+                </div>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (ซ่อนไว้เริ่มต้น) -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#"
+                    class="block text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium">หน้าแรก</a>
+                <!-- Mobile Dropdown -->
+                <div>
+                    <button id="mobile-dropdown-btn"
+                        class="w-full flex justify-between items-center text-left bg-green-600 text-white px-3 py-2 rounded-md text-base font-medium">
+                        <span>สาระน่ารู้</span>
+                        <svg id="mobile-dropdown-arrow" class="w-5 h-5 transition-transform duration-200"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div id="mobile-dropdown-menu" class="hidden mt-1 pl-4 space-y-1">
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-semibold text-green-700 bg-green-50">ประวัติศาสตร์แม่กลอง</a>
+                        <!-- <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">วัฒนธรรม</a> -->
+                        <a href="maeklong-food.html"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">อาหารไทย</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">เทศกาลไทย</a>
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:bg-gray-50">ศิลปะไทย</a>
+                    </div>
+                </div>
+                <a href="#"
+                    class="block text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium">กิจกรรมและข่าวสาร</a>
+                <a href="#"
+                    class="block text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium">บริการ</a>
+                <a href="#"
+                    class="block text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium">ติดต่อเรา</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 
+      Main Content Area 
+      เนื้อหาเกี่ยวกับประวัติศาสตร์แม่กลอง
+    -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="max-w-4xl mx-auto bg-white p-6 sm:p-8 lg:p-10 rounded-lg shadow-lg">
+
+            <!-- Page Title -->
+            <h1 class="text-4xl font-bold text-gray-900 mb-6 border-b-4 border-green-500 pb-3">
+                ประวัติศาสตร์แม่กลอง
+            </h1>
+
+            <!-- Introduction -->
+            <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                "แม่กลอง" หรือ จังหวัดสมุทรสงคราม ถือเป็นเมืองเก่าแก่ที่มีประวัติศาสตร์ยาวนาน
+                เป็นที่รู้จักในฐานะเมืองแห่งสายน้ำและวิถีชีวิตริมคลองอันเป็นเอกลักษณ์
+                ประวัติของเมืองนี้มีความเชื่อมโยงอย่างลึกซึ้งกับประวัติศาสตร์ของชาติไทยตั้งแต่สมัยอยุธยาจนถึงปัจจุบัน
+            </p>
+
+            <!-- Hero Image -->
+            <div class="mb-8">
+                <!--  -->
+                <img class="w-full h-auto max-h-[500px] object-cover rounded-lg shadow-md"
+                    src="https://cms.dmpcdn.com/travel/2021/05/23/b6d53ee0-bb92-11eb-80e5-d7e8b997938a_original.jpg"
+                    alt="แม่น้ำแม่กลอง"
+                    onerror="this.src='https://placehold.co/1000x500/a0d9b0/333333?text=Image+Not+Found'">
+                <p class="text-center text-sm text-gray-500 mt-2">วิถีชีวิตริมสองฝั่งแม่น้ำแม่กลอง</p>
+            </div>
+
+            <!-- Section 1: Ayutthaya Period -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">ยุคกรุงศรีอยุธยา: สวนนอกแห่งอโยธยา</h2>
+                <p class="text-base text-gray-700 mb-4 leading-loose">
+                    ในสมัยกรุงศรีอยุธยา พื้นที่บริเวณจังหวัดสมุทรสงครามในปัจจุบันเป็นที่รู้จักในนาม "สวนนอก" (ตรงข้ามกับ
+                    "สวนใน" คือบางกอก) เนื่องจากเป็นพื้นที่ราบลุ่มปากแม่น้ำที่อุดมสมบูรณ์ เหมาะแก่การเพาะปลูก ทำสวนผลไม้
+                    และทำการประมง สันนิษฐานว่าชุมชนแรกเริ่มก่อตั้งขึ้นในบริเวณตำบลบางคณฑี โดยมีศูนย์กลางอยู่ที่
+                    "เมืองแม่กลอง" ซึ่งในขณะนั้นยังเป็นเพียงชุมชนขนาดเล็ก
+                </p>
+                <p class="text-base text-gray-700 leading-loose">
+                    หลักฐานทางประวัติศาสตร์ปรากฏชื่อ "แม่กลอง" ในฐานะเมืองหน้าด่านทางทะเลที่สำคัญแห่งหนึ่ง
+                    ใช้เป็นเส้นทางลำเลียงเสบียงอาหารและกำลังพลไปยังอยุธยา
+                </p>
+            </section>
+
+            <!-- Section 2: Thonburi & Rattanakosin Period -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">ยุคธนบุรีและรัตนโกสินทร์: แผ่นดินประสูติ ร.๒</h2>
+                <p class="text-base text-gray-700 mb-4 leading-loose">
+                    ความสำคัญของเมืองแม่กลองชัดเจนขึ้นในสมัยกรุงธนบุรีและกรุงรัตนโกสินทร์ตอนต้น โดยเฉพาะอย่างยิ่ง
+                    เมืองนี้เป็นสถานที่ประสูติของพระบาทสมเด็จพระพุทธเลิศหล้านภาลัย (รัชกาลที่ 2) แห่งราชวงศ์จักรี
+                    ซึ่งในขณะนั้นพระบิดา (รัชกาลที่ 1) ยังดำรงตำแหน่งหลวงยกระบัตรเมืองราชบุรี
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6 items-center">
+                    <div class="text-base text-gray-700 leading-loose">
+                        <p>
+                            ด้วยเหตุนี้ สมุทรสงครามจึงมีความผูกพันกับราชวงศ์จักรีอย่างแนบแน่น และยังเป็นที่ตั้งของ
+                            "อุทยาน ร.2" ณ อำเภออัมพวา เพื่อเฉลิมพระเกียรติพระองค์ท่าน
+                        </p>
+                        <p class="mt-4">
+                            ในยุคนี้ แม่กลองได้พัฒนาจากการเป็นชุมชนเกษตรกรรมมาเป็นเมืองท่าการค้าที่สำคัญ
+                            มีการขุดคลองเชื่อมโยงมากมายเพื่อการคมนาคมและขนส่งสินค้า จนได้ชื่อว่าเป็น "เมืองสามน้ำ"
+                            (น้ำจืด น้ำเค็ม และน้ำกร่อย) ที่มีระบบนิเวศอันเป็นเอกลักษณ์
+                        </p>
+                    </div>
+                    <div>
+                        <!--  -->
+                        <img class="w-full h-auto object-cover rounded-lg shadow-md"
+                            src="https://www.silpa-mag.com/wp-content/uploads/2024/12/Cover-photo-8.jpg"
+                            alt="อุทยาน ร.2 อัมพวา"
+                            onerror="this.src='https://placehold.co/600x400/b0e0c0/333333?text=Image+Not+Found'">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Modern Era -->
+            <section class="mb-10">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-4">แม่กลองในวันนี้: เสน่ห์ที่ไม่เคยจาง</h2>
+                <p class="text-base text-gray-700 mb-4 leading-loose">
+                    ปัจจุบัน จังหวัดสมุทรสงคราม หรือ "แม่กลอง"
+                    ยังคงรักษามนต์เสน่ห์ของวิถีชีวิตดั้งเดิมไว้ได้อย่างน่าทึ่ง ท่ามกลางกระแสการเปลี่ยนแปลงของโลกสมัยใหม่
+                </p>
+                <p class="text-base text-gray-700 mb-6 leading-loose">
+                    สถานที่อย่าง "ตลาดร่มหุบ" (ตลาดรถไฟแม่กลอง) กลายเป็นสัญลักษณ์ที่โด่งดังไปทั่วโลก
+                    แสดงถึงการปรับตัวของชุมชนที่อยู่ร่วมกับความทันสมัยได้อย่างลงตัว ตลาดน้ำอัมพวา ตลาดน้ำบางน้อย
+                    และวิถีชีวิตริมคลอง ยังคงดึงดูดให้นักท่องเที่ยวเข้ามาสัมผัสความเป็น "เมืองสายน้ำ" ที่แท้จริง
+                </p>
+                <!--  -->
+                <img class="w-full h-auto max-h-[450px] object-cover rounded-lg shadow-md"
+                    src="https://image.bangkokbiznews.com/image/kt/media/image/news/2016/10/12/722479/640x390_722479_1476238888.jpg"
+                    alt="ตลาดร่มหุบ แม่กลอง"
+                    onerror="this.src='https://placehold.co/1000x450/c0f0d0/333333?text=Image+Not+Found'">
+            </section>
+
+            <!-- Conclusion -->
+            <section>
+                <p class="text-lg text-gray-800 font-medium leading-relaxed border-t pt-6 mt-10">
+                    ประวัติศาสตร์ของแม่กลองจึงไม่ใช่เป็นเพียงเรื่องราวในอดีต แต่เป็นรากฐานที่ยังคงมีชีวิตชีวา
+                    ส่งผลต่อวัฒนธรรม ประเพณี และตัวตนของผู้คนในปัจจุบัน
+                    สร้างเสน่ห์อันเป็นเอกลักษณ์ที่หาได้ยากให้กับจังหวัดสมุทรสงคราม
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- 
+      Footer 
+      ส่วนท้ายของเว็บไซต์
+    -->
+    <footer class="bg-white border-t mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-center text-gray-500 text-sm">
+                &copy; 2025 เสน่ห์สมุทรสงคราม (Charm of Samut Songkhram). All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- 
+      JavaScript 
+      สำหรับควบคุมเมนู Dropdown และ Mobile Menu
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // --- Desktop Dropdown ---
+            const dropdownBtn = document.getElementById('dropdown-btn');
+            const dropdownMenu = document.getElementById('dropdown-menu');
+            const dropdownArrow = document.getElementById('dropdown-arrow');
+
+            if (dropdownBtn) {
+                dropdownBtn.addEventListener('click', function (e) {
+                    e.stopPropagation(); // หยุดไม่ให้ event ไปถึง window
+                    // สลับการแสดง/ซ่อน เมนู
+                    dropdownMenu.classList.toggle('hidden');
+                    // สลับการหมุนลูกศร
+                    dropdownArrow.classList.toggle('rotate-180');
+                });
+            }
+
+            // --- Mobile Dropdown ---
+            const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+            const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+            const mobileDropdownArrow = document.getElementById('mobile-dropdown-arrow');
+
+            if (mobileDropdownBtn) {
+                mobileDropdownBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    mobileDropdownMenu.classList.toggle('hidden');
+                    mobileDropdownArrow.classList.toggle('rotate-180');
+                });
+            }
+
+            // --- Mobile Menu (Hamburger) ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // --- ปิดเมนูเมื่อคลิกนอกพื้นที่ ---
+            window.addEventListener('click', function () {
+                // ปิด Desktop Dropdown
+                if (dropdownMenu && !dropdownMenu.classList.contains('hidden')) {
+                    dropdownMenu.classList.add('hidden');
+                    dropdownArrow.classList.remove('rotate-180');
+                }
+
+                // (ไม่จำเป็นต้องปิด Mobile Menu หลัก เพราะมันเต็มจอ)
+                // (แต่ควรปิด Mobile Dropdown ย่อย ถ้าเปิดอยู่)
+                if (mobileDropdownMenu && !mobileDropdownMenu.classList.contains('hidden')) {
+                    mobileDropdownMenu.classList.add('hidden');
+                    mobileDropdownArrow.classList.remove('rotate-180');
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
