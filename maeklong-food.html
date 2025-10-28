@@ -24,7 +24,26 @@
         }
     </style>
 </head>
+<div id="bn-root"></div>
 
+<script>window.onload = function () { BN.init({ version: '1.0' }) }</script>
+<script>
+        (function (d, s, id) {
+            var js, bjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://console.botnoi.ai/customerchat/index.js';
+            bjs.parentNode.insertBefore(js, bjs);
+        }(document, 'script', 'bn-jssdk'));
+</script>
+
+<div class="bn-customerchat" bot_id="68f8a69d47ecdfb86c7e3f67" bot_logo=""
+    bot_name="น้องบอทปลาทู" theme_color="#000000"
+    locale="th"
+    logged_in_greeting="สวัสดีงับ มีอะไรให้ผมช่วยมั้ย"
+    greeting_message="สวัสดีงับ มีอะไรให้ผมช่วยมั้ย"
+    default_open="OPTIONAL ATTRIBUTE, YOU CAN SET DEFULT TO SHOW OR HIDE CHATROOM [EX. true]">
+</div>
 <body>
 
     <!-- 
@@ -38,9 +57,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <!-- แก้ไข SVG เป็น <img> tag -->
                     <!-- คุณสามารถเปลี่ยน 'src' เป็น URL ของโลโก้จริงได้เลยครับ -->
-                    <img class="h-17 w-14 object-contain" 
-                         src="img/logo.png" 
-                         alt="Logo เสน่ห์เมืองน้ำ">
+                    <img class="h-17 w-14 object-contain" src="img/logo.png" alt="Logo เสน่ห์เมืองน้ำ">
                     <span class="ml-2 text-xl font-bold text-gray-800">เสน่ห์เมืองน้ำ</span>
                 </div>
 
@@ -80,7 +97,7 @@
                         class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">กิจกรรมและข่าวสาร</a>
                     <a href="#"
                         class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">บริการ</a>
-                    <a href="#"
+                    <a href="contact.html"
                         class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium">ติดต่อเรา</a>
                 </div>
 
@@ -134,7 +151,7 @@
                     class="block text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium">กิจกรรมและข่าวสาร</a>
                 <a href="#"
                     class="block text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium">บริการ</a>
-                <a href="#"
+                <a href="contact.html"
                     class="block text-gray-600 hover:bg-gray-50 px-3 py-2 rounded-md text-base font-medium">ติดต่อเรา</a>
             </div>
         </div>
@@ -148,7 +165,7 @@
 
         <!-- Page Title -->
         <h1 class="text-4xl font-bold text-gray-900 mb-6 border-b-4 border-green-500 pb-3">
-            ลิ้มรส...เสน่ห์แม่กลอง
+            ลิ้มรสเสน่ห์แม่กลอง
         </h1>
         <p class="text-lg text-gray-700 mb-10 leading-relaxed max-w-4xl">
             สมุทรสงครามคือดินแดนแห่ง "สามน้ำ" ที่อุดมสมบูรณ์ ที่นี่จึงเป็นสวรรค์ของนักชิม
@@ -166,7 +183,8 @@
                 <div
                     class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
                     <img class="h-56 w-full object-cover"
-                        src="https://static.thairath.co.th/media/dFQROr7oWzulq5Fa5KwQHJ3IsPE214UiadiMpNIMeUXT0iW1z54bcczBJD4hYveIsMZ.jpg" alt="ปลาทูแม่กลอง"
+                        src="https://static.thairath.co.th/media/dFQROr7oWzulq5Fa5KwQHJ3IsPE214UiadiMpNIMeUXT0iW1z54bcczBJD4hYveIsMZ.jpg"
+                        alt="ปลาทูแม่กลอง"
                         onerror="this.src='https://placehold.co/600x400/a0c0e0/333333?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-2">ปลาทูแม่กลอง</h3>
@@ -181,7 +199,8 @@
                 <div
                     class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
                     <img class="h-56 w-full object-cover"
-                        src="https://img.wongnai.com/p/1920x0/2017/12/22/27879ce6d5454d9e899f5df57f21fe95.jpg" alt="หอยหลอดผัดฉ่า"
+                        src="https://img.wongnai.com/p/1920x0/2017/12/22/27879ce6d5454d9e899f5df57f21fe95.jpg"
+                        alt="หอยหลอดผัดฉ่า"
                         onerror="this.src='https://placehold.co/600x400/e0b0a0/333333?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-2">หอยหลอดผัดฉ่า</h3>
@@ -196,7 +215,8 @@
                 <div
                     class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
                     <img class="h-56 w-full object-cover"
-                        src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.6435-9/58383789_432505407506633_6711846995205554176_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NSizJbzyVcYQ7kNvwG35E_R&_nc_oc=AdncfGS9-utSNmSikUJ5f0SymWgUG_1dZZpy8xckz26oEXP2onZh5TaWgF7F6kpn8-8&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&_nc_gid=KlZi_wcpuwMwR5H1UYWtQg&oh=00_AfesQMZaLmtEHTIx2wPzRvPBVBLDkXNx2dL4hNjKxlfUYQ&oe=6925A51A" alt="แกงส้มใบชะคราม"
+                        src="https://scontent.fbkk4-1.fna.fbcdn.net/v/t1.6435-9/58383789_432505407506633_6711846995205554176_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NSizJbzyVcYQ7kNvwG35E_R&_nc_oc=AdncfGS9-utSNmSikUJ5f0SymWgUG_1dZZpy8xckz26oEXP2onZh5TaWgF7F6kpn8-8&_nc_zt=23&_nc_ht=scontent.fbkk4-1.fna&_nc_gid=KlZi_wcpuwMwR5H1UYWtQg&oh=00_AfesQMZaLmtEHTIx2wPzRvPBVBLDkXNx2dL4hNjKxlfUYQ&oe=6925A51A"
+                        alt="แกงส้มใบชะคราม"
                         onerror="this.src='https://placehold.co/600x400/b0e0c0/333333?text=Image+Not+Found'">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-2">แกงส้มใบชะคราม</h3>
@@ -224,7 +244,8 @@
                 <div
                     class="flex flex-col sm:flex-row bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <img class="sm:w-1/3 h-56 sm:h-auto object-cover"
-                        src="https://www.khaosod.co.th/sentangsedtee/wp-content/uploads/2021/01/S__16785533.jpg" alt="ร้านแดงอาหารทะเล"
+                        src="https://www.khaosod.co.th/sentangsedtee/wp-content/uploads/2021/01/S__16785533.jpg"
+                        alt="ร้านแดงอาหารทะเล"
                         onerror="this.src='https://placehold.co/400x300/e0d0b0/333333?text=Image+Not+Found'">
                     <div class="p-6 flex flex-col justify-between">
                         <div>
@@ -264,11 +285,36 @@
                     </div>
                 </div>
 
+                <div
+                    class="flex flex-col sm:flex-row bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                    <img class="sm:w-1/3 h-56 sm:h-auto object-cover"
+                        src="https://cms.dmpcdn.com/food/2024/09/16/a6da23d0-7434-11ef-9127-47d24f0db138_webp_original.webp"
+                        alt="เกษรอาหารทะเล"
+                        onerror="this.src='https://placehold.co/400x300/b0e0c0/333333?text=Image+Not+Found'">
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full mb-2">อาหารทะเล</span>
+                            <h3 class="text-2xl font-semibold text-green-700 mb-2">โอฬารอาหารทะเล</h3>
+                            <p class="text-base text-gray-700 mb-4">
+                                ร้านอาหารทะเลร้านเก่าแก่ในจังหวัดสมุทรสงคราม
+                                จุดเด่นของร้านนี้คือเมนูอาหารของเค้าจานใหญ่สมชื่อร้าน อาหารทะเลของที่ร้านสดจริง
+                                คุณภาพดีสมราคา เมนูแนะนำมีหลากหลาย ไม่ว่าจะเป็น ปูเนื้อ-ปูไข่
+                                นึ่ง,ปูไข่แกงส้มหน่อไม้-ผักรวม กรรเชียงปูผัดผงกะหรี่ หมึกผัดกระเทียม ฯลฯ
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-600 font-medium"><b>เมนูเด็ด:</b>ปูเนื้อ-ปูไข่
+                            นึ่ง,ปูไข่แกงส้มหน่อไม้-ผักรวม กรรเชียงปูผัดผงกะหรี่ หมึกผัดกระเทียม
+                            ยำใบชะคราม</p>
+                    </div>
+                </div>
+
                 <!-- Restaurant 3: รัญจวน อัมพวา -->
                 <div
                     class="flex flex-col sm:flex-row bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <img class="sm:w-1/3 h-56 sm:h-auto object-cover"
-                        src="https://www.tripgether.com/wp-content/uploads/tripgetter/ranjuan_900.jpg" alt="ร้านรัญจวน อัมพวา"
+                        src="https://www.tripgether.com/wp-content/uploads/tripgetter/ranjuan_900.jpg"
+                        alt="ร้านรัญจวน อัมพวา"
                         onerror="this.src='https://placehold.co/400x300/c0d0f0/333333?text=Image+Not+Found'">
                     <div class="p-6 flex flex-col justify-between">
                         <div>
@@ -283,6 +329,77 @@
                         </div>
                         <p class="text-sm text-gray-600 font-medium"><b>เมนูเด็ด:</b> น้ำพริกรัญจวน, แกงรัญจวน,
                             ปลาทูซาเตี๊ยะ</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col sm:flex-row bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                    <img class="sm:w-1/3 h-56 sm:h-auto object-cover"
+                        src="https://cms.dmpcdn.com/food/2025/05/29/eda82450-3c5d-11f0-95f0-0998c122b0da_webp_original.webp"
+                        alt="ข้าวใหม่ปลามัน อัมพวา"
+                        onerror="this.src='https://placehold.co/400x300/c0d0f0/333333?text=Image+Not+Found'">
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full mb-2">
+                                อาหารพื้นบ้าน / อัมพวา</span>
+                            <h3 class="text-2xl font-semibold text-green-700 mb-2" ข้าวใหม่ปลามัน อัมพวา</h3>
+                                <p class="text-base text-gray-700 mb-4">
+                                    ข้าวใหม่ปลามัน ร้านอาหารสุดเก๋แห่งอัมพวา
+                                    บอกเลยว่าใครได้ไปก็ต้องหลงรักบรรยากาศของที่นี่
+                                    เป็นร้านที่อยู่ท่ามกลางน้ำ ถูกล้อมไปด้วยทุ่งนาสีเขียวขจี บรรยากาศดีสุดๆ
+                                    ตัวร้านก็ดีไซน์น่ารักมาก ทำด้วยไม้ไผ่ ส่วนเรื่องของอาหารไม่ได้ต้องพูดถึงเลยค่ะ
+                                    เพราะรับประกันความอร่อย เน้นอาหารท้องถิ่นสมุทรสงคราม มีให้เลือกทานอย่างหลากหลาย
+                                    เหมาะสำหรับพาครอบครัวมาทานมื้ออร่อย
+                                </p>
+                        </div>
+                        <p class="text-sm text-gray-600 font-medium"><b>เมนูเด็ด:</b> อาหารท้องถิ่นสมุทรสงคราม </p>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col sm:flex-row bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                    <img class="sm:w-1/3 h-56 sm:h-auto object-cover"
+                        src="https://cms.dmpcdn.com/food/2024/09/16/0b5ea820-743b-11ef-bb01-95f2c891ee77_webp_original.webp"
+                        alt="ครัวครูหมู แม่กลอง"
+                        onerror="this.src='https://placehold.co/400x300/c0d0f0/333333?text=Image+Not+Found'">
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full mb-2">อาหารพื้นบ้าน
+                                / อัมพวา</span>
+                            <h3 class="text-2xl font-semibold text-green-700 mb-2">ครัวครูหมู แม่กลอง</h3>
+                            <p class="text-base text-gray-700 mb-4">
+                                ถ้าหาร้านอาหารอร่อยๆ ในจังหวัดสมุทรสงคราม ที่บรรยากาศดีติดริมแม่น้ำแม่กลอง
+                                เราขอแนะนำร้าน ครัวครูหมู แม่กลอง เลยค่ะ
+                                ร้านนี้ขึ้นชื่อเรื่องการเลือกสรรวัตถุดิบสดใหม่จากท้องทะเลมาปรุงอาหาร
+                                และมีป้ายติดราคาอาหารทะเลให้ทราบชัดเจน เป็นร้านดังแห่งลุ่มแม่น้ำแม่กลอง เปิดมานานกว่า 10
+                                ปีแล้ว มีเมนูให้เลือกสรรมากมาย บรรยากาศสบายๆ บริการน่าประทับใจ
+                                เป็นร้านที่ไม่ควรพลาดเป็นอย่างยิ่ง
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-600 font-medium"><b>เมนูเด็ด:</b>ปลาทูซาเตี๊ยะ</p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex flex-col sm:flex-row bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                    <img class="sm:w-1/3 h-56 sm:h-auto object-cover"
+                        src="https://cms.dmpcdn.com/food/2024/09/16/3df968f0-743c-11ef-8864-27b41594f2c7_webp_original.webp"
+                        alt="ไสวอาหารทะเล"
+                        onerror="this.src='https://placehold.co/400x300/c0d0f0/333333?text=Image+Not+Found'">
+                    <div class="p-6 flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2 py-1 rounded-full mb-2">อาหารทะเล</span>
+                            <h3 class="text-2xl font-semibold text-green-700 mb-2">ไสวอาหารทะเล</h3>
+                            <p class="text-base text-gray-700 mb-4">
+                                ถ้าใครตามหาร้านอาหารทะเลที่ อร่อย สด สะอาด ปราศจากชูรส ต้องมาที่นี่เลย! ไสวอาหารทะเล
+                                อีกหนึ่งร้านอาหารทะเล แม่กลอง ที่ทุกคนไม่ควรพลาด เมนูแนะนำของร้านนี้คือ ปลาทูสดต้มมะดัน
+                                ปูทะเลหลน หอยหลอดผัดฉ่า กุ้งแชบ๊วยผัดกระเทียม กรรเชียงปูผัดพริกเหลือง บอกเลยว่า สด สะอาด
+                                อร่อยแบบคงเส้นคงวา ไม่ผิดหวังทุกครั้งที่ได้มากิน
+                            </p>
+                        </div>
+                        <p class="text-sm text-gray-600 font-medium"><b>เมนูเด็ด:</b>อาหารทะเล</p>
                     </div>
                 </div>
 
