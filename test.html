@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เทศกาลสมุทรสงคราม</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* เราใช้ @layer base เพื่อบอก Tailwind ว่านี่คือสไตล์พื้นฐาน
+      เพื่อให้คลาส utility อื่นๆ ของ Tailwind ยังคงทับซ้อนได้ 
+    */
+        @layer base {
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: scale(0.95);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+
+            /* สร้างคลาส .animate-fade-in เพื่อเรียกใช้ 
+        Tailwind จะจดจำคลาสนี้
+      */
+            .animate-fade-in {
+                animation: fadeIn 0.3s ease-out;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="font-sans">
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                เทศกาลน่าสนใจในสมุทรสงคราม
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://storage.googleapis.com/proudstorage/images/2021/11/cover-platue.original.jpg"
+                        alt="เทศกาลปลาทูแม่กลอง" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">เทศกาลปลาทูแม่กลอง</h3>
+                        <p class="text-gray-600 mb-4">
+                            "ปลาทูหน้างอ คอหัก" อันเลื่องชื่อ พบกับเมนูปลาทูหลากหลาย
+                            และสินค้าพื้นเมืองมากมาย
+                        </p>
+                        <button data-modal-target="pla-tu-modal"
+                            class="open-modal-btn bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                            อ่านเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://api.tourismthailand.org/upload/live/content_article/1-11531.png"
+                        alt="เทศกาลลิ้นจี่สมุทรสงคราม" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">เทศกาลลิ้นจี่</h3>
+                        <p class="text-gray-600 mb-4">
+                            ลิ้นจี่พันธุ์ค่อมชื่อดัง รสชาติหวานอมเปรี้ยว
+                            เลือกซื้อลิ้นจี่สดจากสวนและผลิตภัณฑ์แปรรูป
+                        </p>
+                        <button data-modal-target="lychee-modal"
+                            class="open-modal-btn bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                            อ่านเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <img src="https://i.ytimg.com/vi/q1R2rP_xHqk/maxresdefault.jpg" alt="ประเพณีลอยกระทงกาบกล้วย"
+                        class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">ลอยกระทงกาบกล้วย</h3>
+                        <p class="text-gray-600 mb-4">
+                            ประเพณีเก่าแก่หนึ่งเดียวในโลก ชมความงามของกระทงกาบกล้วยกว่า 2 แสนใบที่ลอยสว่างไสวเต็มลำน้ำ
+                        </p>
+                        <button data-modal-target="loy-krathong-modal"
+                            class="open-modal-btn bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                            อ่านเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div id="pla-tu-modal"
+        class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative animate-fade-in">
+            <button
+                class="close-modal-btn absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h3 class="text-2xl font-semibold mb-4">เทศกาลปลาทูแม่กลอง</h3>
+            <p class="text-gray-700">
+                จัดขึ้นประมาณเดือนธันวาคมของทุกปี บริเวณหน้าศาลากลางจังหวัดฯ
+                ภายในงานจะได้พบกับเมนูอาหารที่ทำจากปลาทูมากกว่า 50 เมนู
+                เช่น ปลาทูซาเตี๊ยะ, ปลาทูต้มส้ม, ฉู่ฉี่ปลาทู และอื่นๆ
+                นอกจากนี้ยังมีการแสดงดนตรีและการจำหน่ายสินค้า OTOP
+                ถือเป็นเทศกาลที่ดึงดูดนักท่องเที่ยวได้มากที่สุดงานหนึ่งของจังหวัด
+            </p>
+        </div>
+    </div>
+
+    <div id="lychee-modal"
+        class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative animate-fade-in">
+            <button
+                class="close-modal-btn absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h3 class="text-2xl font-semibold mb-4">เทศกาลลิ้นจี่สมุทรสงคราม</h3>
+            <p class="text-gray-700">
+                จัดขึ้นในช่วงประมาณเดือนเมษายน - พฤษภาคม
+                ซึ่งเป็นช่วงที่ลิ้นจี่พันธุ์ค่อมให้ผลผลิต
+                ลิ้นจี่ของที่นี่มีเอกลักษณ์คือ ลูกเล็ก เปลือกบางสีแดงเข้ม เนื้อเต่งตึง และรสชาติหวานซ่อนเปรี้ยว
+                ในงานมีการประกวดลิ้นจี่คุณภาพดี และจำหน่ายผลผลิตสดๆ จากชาวสวนโดยตรง
+            </p>
+        </div>
+    </div>
+
+    <div id="loy-krathong-modal"
+        class="modal fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg shadow-xl max-w-md w-full p-6 relative animate-fade-in">
+            <button
+                class="close-modal-btn absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl">&times;</button>
+            <h3 class="text-2xl font-semibold mb-4">ประเพณีลอยกระทงกาบกล้วย</h3>
+            <p class="text-gray-700">
+                เป็นประเพณีที่สืบทอดกันมายาวนาน จัดขึ้นที่วัดภุมรินทร์กุฎีทอง
+                ชาวบ้านจะใช้กาบกล้วยมาทำเป็นกระทง แล้วจุดธูปเทียนปักลงไป
+                จากนั้นปล่อยลอยเป็นสายในแม่น้ำแม่กลอง
+                เกิดเป็นภาพแสงเทียนระยิบระยับสวยงามตระการตา
+                สะท้อนถึงวิถีชีวิตความผูกพันกับสายน้ำของคนแม่กลอง
+            </p>
+        </div>
+    </div>
+    <script>
+        // รอให้เอกสาร HTML โหลดเสร็จก่อนเริ่มทำงาน
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // เลือกปุ่ม 'เปิด' Modal ทั้งหมด
+            const openModalButtons = document.querySelectorAll('.open-modal-btn');
+
+            // เลือกปุ่ม 'ปิด' Modal ทั้งหมด
+            const closeModalButtons = document.querySelectorAll('.close-modal-btn');
+
+            // เลือกพื้นหลัง Modal ทั้งหมด
+            const modals = document.querySelectorAll('.modal');
+
+            // ฟังก์ชันเปิด Modal
+            const openModal = (modal) => {
+                if (modal) {
+                    modal.classList.remove('hidden'); // ลบคลาส 'hidden'
+                    modal.classList.add('flex');      // เพิ่มคลาส 'flex' เพื่อจัดกลาง
+                }
+            };
+
+            // ฟังก์ชันปิด Modal
+            const closeModal = (modal) => {
+                if (modal) {
+                    modal.classList.add('hidden');    // เพิ่มคลาส 'hidden'
+                    modal.classList.remove('flex');   // ลบคลาส 'flex'
+                }
+            };
+
+            // เพิ่ม Event Listener (ตัวดักฟังการคลิก) ให้ปุ่ม 'เปิด' ทุกปุ่ม
+            openModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // หา ID ของ Modal ที่จะเปิด จาก attribute 'data-modal-target'
+                    const modalId = button.getAttribute('data-modal-target');
+                    const modal = document.getElementById(modalId);
+                    openModal(modal);
+                });
+            });
+
+            // เพิ่ม Event Listener ให้ปุ่ม 'ปิด' (ปุ่ม x) ทุกปุ่ม
+            closeModalButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // หา Modal ที่เป็นแม่ของปุ่มนี้ (ปุ่มที่ใกล้ที่สุด)
+                    const modal = button.closest('.modal');
+                    closeModal(modal);
+                });
+            });
+
+            // เพิ่ม Event Listener ให้พื้นหลัง Modal (คลิกที่พื้นหลังสีเทาเพื่อปิด)
+            modals.forEach(modal => {
+                modal.addEventListener('click', (event) => {
+                    // เช็คว่าผู้ใช้คลิกที่พื้นหลัง (event.target คือ 'modal') 
+                    // ไม่ใช่ที่ตัวเนื้อหา (กล่องสีขาวด้านใน)
+                    if (event.target === modal) {
+                        closeModal(modal);
+                    }
+                });
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
